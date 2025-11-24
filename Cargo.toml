@@ -1,29 +1,30 @@
 [package]
 name = "tree-sitter-highlight"
-version.workspace = true
+version = "0.25.9"
 description = "Library for performing syntax highlighting with Tree-sitter"
 authors = [
   "Max Brunsfeld <maxbrunsfeld@gmail.com>",
   "Tim Clem <timothy.clem@gmail.com>",
 ]
-edition.workspace = true
-rust-version.workspace = true
+edition = "2021"
+rust-version = "1.82"
 readme = "README.md"
-homepage.workspace = true
-repository.workspace = true
-license.workspace = true
+homepage = "https://tree-sitter.github.io/tree-sitter"
+repository = "https://github.com/tree-sitter/tree-sitter"
+license = "MIT"
 keywords = ["incremental", "parsing", "syntax", "highlighting"]
 categories = ["parsing", "text-editors"]
-
-[lints]
-workspace = true
 
 [lib]
 crate-type = ["lib", "staticlib"]
 
 [dependencies]
-regex.workspace = true
-thiserror.workspace = true
-streaming-iterator.workspace = true
+regex = "1.11.1"
+thiserror = "2.0.11"
+streaming-iterator = "0.1.9"
 
-tree-sitter.workspace = true
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+tree-sitter = "0.25"
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+tree-sitter = { package = "tree-sitter-c2rust", version = "0.25" }
