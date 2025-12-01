@@ -63,10 +63,10 @@ Load some highlighting queries from the `queries` directory of the language repo
 ```rust
 use tree_sitter_highlight::HighlightConfiguration;
 
-let javascript_language = tree_sitter_javascript::language();
+let javascript_language = tree_sitter_javascript::LANGUAGE;
 
 let mut javascript_config = HighlightConfiguration::new(
-    javascript_language,
+    javascript_language.into(),
     "javascript",
     tree_sitter_javascript::HIGHLIGHT_QUERY,
     tree_sitter_javascript::INJECTIONS_QUERY,
@@ -76,13 +76,13 @@ let mut javascript_config = HighlightConfiguration::new(
 
 Configure the recognized names:
 
-```rust
+```rust,ignore
 javascript_config.configure(&highlight_names);
 ```
 
 Highlight some code:
 
-```rust
+```rust,ignore
 use tree_sitter_highlight::HighlightEvent;
 
 let highlights = highlighter.highlight(
