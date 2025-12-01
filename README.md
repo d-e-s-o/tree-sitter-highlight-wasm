@@ -6,7 +6,7 @@
 [crates.io badge]: https://img.shields.io/crates/v/tree-sitter-highlight-wasm.svg?color=%23B48723
 
 > [!IMPORTANT]
-> This crate is a fork of [`tree-sitter-highlight-wasm`](https://crates.io/crates/tree-sitter-highlight) that works in a WebAssembly context.
+> This crate is a fork of [`tree-sitter-highlight`](https://crates.io/crates/tree-sitter-highlight) that works in a WebAssembly context.
 
 ## Usage
 
