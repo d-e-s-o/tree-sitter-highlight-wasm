@@ -1,5 +1,5 @@
 [package]
-name = "tree-sitter-highlight"
+name = "tree-sitter-highlight-wasm"
 version = "0.25.9"
 description = "Library for performing syntax highlighting with Tree-sitter"
 authors = [
@@ -30,4 +30,6 @@ tree-sitter = "0.25"
 tree-sitter = { package = "tree-sitter-c2rust", version = "0.25" }
 
 [dev-dependencies]
+# Dependency necessary to keep code snippets in README as-is.
+tree-sitter-highlight = "0.25"
 tree-sitter-javascript = "0.25"

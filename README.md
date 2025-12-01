@@ -2,8 +2,11 @@
 
 [![crates.io badge]][crates.io]
 
-[crates.io]: https://crates.io/crates/tree-sitter-highlight
-[crates.io badge]: https://img.shields.io/crates/v/tree-sitter-highlight.svg?color=%23B48723
+[crates.io]: https://crates.io/crates/tree-sitter-highlight-wasm
+[crates.io badge]: https://img.shields.io/crates/v/tree-sitter-highlight-wasm.svg?color=%23B48723
+
+> [!IMPORTANT]
+> This crate is a fork of [`tree-sitter-highlight-wasm`](https://crates.io/crates/tree-sitter-highlight) that works in a WebAssembly context.
 
 ## Usage
 
@@ -12,8 +15,8 @@ to parse, to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-tree-sitter-highlight = "0.22.0"
-tree-sitter-javascript = "0.21.3"
+tree-sitter-highlight-wasm = "0.25"
+tree-sitter-javascript = "0.25"
 ```
 
 Define the list of highlight names that you will recognize:
